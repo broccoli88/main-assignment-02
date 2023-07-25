@@ -9,8 +9,6 @@
 	--color-bg-cta: #3882f6; /* cta => call to action */
 	--color-bg-button: #3882f6;
 
-	/* ...::: [ FONT VARIABLES ] :::... */
-
 	/* FONT COLORS */
 
 	--color-font-main: #1f2937;
@@ -37,6 +35,17 @@
 	--weight-font-logo: 700;
 	--weight-font-inf-header: 900;
 	--weight-font-quote: 300;
+
+	/* FONT FAMILY */
+
+	--family-font-roboto: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+		"Helvetica Neue", sans-serif;
+
+	/* BORDER */
+
+	--border-blue: #3882f6;
+	--border-light: #fff;
 }
 
 *,
@@ -54,9 +63,7 @@ html {
 body {
 	font-size: var(--size-font-main);
 	font-weight: var(--weight-font-main);
-	font-family: "Roboto", sans-serif, system-ui, -apple-system,
-		BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-		"Open Sans", "Helvetica Neue", sans-serif;
+	font-family: var(--family-font-roboto);
 	color: var(--color-font-main);
 	line-height: 1.5;
 	letter-spacing: 1px;
@@ -72,6 +79,7 @@ h3 {
 h1 {
 	font-size: var(--size-font-hero-main);
 	color: var(--color-font-hero-main);
+	line-height: 1.2;
 }
 
 /* ...::: [ PAGE 1  -  PELIN] :::... */
@@ -88,4 +96,177 @@ h1 {
 
 /* ...::: [ PAGE 4  -  PAWEL] :::... */
 
-/* place for your code */
+/* Buttons */
+
+.btn {
+	width: max-content;
+	border: none;
+	background: none;
+	font-family: var(--family-font-roboto);
+	font-size: var(--size-font-main);
+	font-weight: var(--weight-font-logo);
+	text-transform: capitalize;
+	padding: 0.5em 2em;
+	border-radius: 10px;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: 0.3s all ease-in;
+}
+
+.btn--blue {
+	color: var(--color-font-logo);
+	background-color: var(--color-bg-button);
+}
+
+.btn--blue:hover,
+.btn--blue:focus {
+	filter: brightness(1.3);
+}
+
+.btn--outline-blue {
+	color: var(--color-font-logo);
+	border: 2px solid var(--border-light);
+}
+
+.btn--outline-blue:hover,
+.btn--outline-blue:focus {
+	background-color: var(--border-light);
+	color: var(--color-bg-button);
+}
+
+/* Hero section */
+
+.hero {
+	padding: 7vw 12vw;
+	background-color: var(--color-bg-hero);
+	display: flex;
+	gap: 2rem;
+}
+
+.hero h1 {
+	margin-bottom: 2rem;
+}
+
+.hero__content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.hero__text {
+	color: var(--color-font-hero-secondary);
+}
+
+.hero__img-container {
+	flex: 1.3;
+}
+
+.hero__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.hero .btn {
+	margin-top: 3rem;
+}
+
+/* Info section */
+
+.info {
+	display: flex;
+	flex-direction: column;
+}
+
+.info > h2 {
+	font-size: var(--size-font-inf-header);
+	margin-block: 3rem;
+	text-align: center;
+}
+
+.info__img-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5rem;
+	justify-content: center;
+}
+
+.info__img-container {
+	width: min(200px, 100%);
+	display: flex;
+	flex-direction: column;
+}
+
+.info__img {
+	width: 100%;
+	aspect-ratio: 1;
+	border: 3px solid var(--border-blue);
+	border-radius: 7px;
+}
+
+.info__img-description {
+	font-size: clamp(1.3rem, 0.5rem + 0.8vw, 1.6rem);
+	text-align: center;
+	color: var(--color-font-quote);
+}
+
+/* Testimonial section */
+
+.testimonial {
+	display: flex;
+	flex-direction: column;
+
+	padding: 7vw 18vw;
+	margin-top: 10rem;
+
+	background-color: var(--color-bg-quote);
+}
+
+.testimonial__quote,
+.testimonial__quote::after,
+.testimonial__quote::before {
+	font-size: var(--size-font-quote);
+	font-weight: var(--weight-font-quote);
+	font-style: italic;
+	color: var(--color-font-quote);
+}
+
+.testimonial__quote::before {
+	content: open-quote;
+}
+
+.testimonial__quote::after {
+	content: close-quote;
+}
+
+.testimonial__author {
+	font-size: 2.5rem;
+	font-weight: bold;
+	align-self: flex-end;
+}
+
+/* Call to action */
+
+.cta {
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-inline: auto;
+	margin-block: 10rem;
+	padding: 4rem;
+	border-radius: 10px;
+	color: var(--color-font-logo);
+
+	background-color: var(--color-bg-cta);
+}
+
+.cta h3 {
+	font-size: 2.4rem;
+}
+
+.cta__text {
+	max-width: 50ch;
+	margin-top: 1rem;
+}
