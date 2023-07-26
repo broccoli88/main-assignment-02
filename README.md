@@ -9,4 +9,4 @@ Workload spread:
 Pelin: Features Page //
 Lehi: Pricing Page // 
 Yosef: Landing Page // 
-Pawel: Contact Page
+Pawel: Contact Page && Blog Page
