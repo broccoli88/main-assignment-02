@@ -123,19 +123,201 @@ h1 {
 	filter: brightness(1.3);
 }
 
-.btn--outline-blue {
+.btn--outline-white {
 	color: var(--color-font-logo);
 	border: 2px solid var(--border-light);
 }
 
 .btn--outline-blue:hover,
 .btn--outline-blue:focus {
-	background-color: var(--border-light);
-	color: var(--color-bg-button);
+	background-color: var(--color-bg-button);
+	color: var(--color-font-logo);
 }
 
-/* Hero section */
+.btn--outline-blue {
+	color: var(--color-bg-button);
+	border: 2px solid var(--border-blue);
+}
 
+.btn--search {
+	background-color: var(--color-bg-button);
+	border: none;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: min-content;
+	padding-inline: 1rem;
+}
+
+/* BLOG */
+
+.blog-container {
+	width: 100%;
+	max-width: 120rem;
+	margin-inline: auto;
+	padding: 2rem;
+}
+
+.blog-heading {
+	font-size: var(--size-font-inf-header);
+	color: var(--color-font-inf-header);
+	text-align: center;
+}
+
+.themes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	padding: 2rem;
+	margin-block: 4rem;
+
+	border-top: 2px solid var(--border-blue);
+	border-bottom: 2px solid var(--border-blue);
+}
+
+.themes__btns {
+	width: 60%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.theme__btn,
+.blog__btn {
+	font-size: 1.6rem;
+	font-weight: var(--weight-font-main);
+	text-decoration: none;
+}
+
+.theme__search-wrapper {
+	width: 25%;
+}
+
+.theme__search {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	background-color: var(--color-bg);
+	overflow: hidden;
+	border: 2px solid var(--border-blue);
+}
+
+.theme__search-input {
+	border: none;
+	background-color: transparent;
+	padding: 1em 0.5em;
+	width: 100%;
+}
+
+.blog {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	/* justify-content: space-between; */
+}
+
+.blog__card {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	width: min(37rem, 100%);
+	border: 1px solid var(--border-blue);
+	border-radius: 10px;
+	overflow: hidden;
+	margin-inline: auto;
+	box-shadow: 0 0 10px hsl(0, 0%, 0%, 0.2);
+}
+
+.blog__img-container {
+	max-height: 200px;
+}
+
+.blog__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.blog__card-content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 1.5rem;
+	height: 100%;
+}
+
+.blog__card-content > p {
+	padding-bottom: 2rem;
+}
+
+.blog__card-title {
+	margin-bottom: 2rem;
+}
+
+.blog__card-date {
+	font-size: 1.2rem;
+}
+
+.blog__btn {
+	margin-top: auto;
+}
+
+.blog__pagination {
+	display: flex;
+	justify-content: center;
+
+	margin-inline: auto;
+	margin-block: 4rem;
+}
+
+.blog__pagination-btn {
+	height: 3.5rem;
+	text-decoration: none;
+	color: var(--color-bg-button);
+	padding: 0.2em 0.7em;
+	border: 1px solid var(--color-bg-button);
+	border-collapse: collapse;
+	transition: 0.2s all ease-in;
+	display: flex;
+	align-items: center;
+}
+
+.blog__pagination-btn:first-of-type {
+	border-radius: 10px 0 0 10px;
+}
+
+.blog__pagination-btn:last-of-type {
+	border-radius: 0 10px 10px 0;
+}
+
+.btn-last {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn-last:hover path,
+.btn-last:focus path {
+	stroke: var(--color-font-logo);
+}
+
+.blog__pagination-btn:hover,
+.blog__pagination-btn:focus {
+	background-color: var(--color-bg-button);
+	color: var(--color-font-logo);
+}
+
+@media (max-width: 1200px) {
+	.blog__card {
+		width: min(45rem, 100%);
+	}
+}
+/* Hero section */
+/* 
 .hero {
 	padding: 7vw 12vw;
 	background-color: var(--color-bg-hero);
@@ -170,10 +352,10 @@ h1 {
 
 .hero .btn {
 	margin-top: 3rem;
-}
+} */
 
 /* Info section */
-
+/* 
 .info {
 	display: flex;
 	flex-direction: column;
@@ -209,11 +391,11 @@ h1 {
 	font-size: clamp(1.3rem, 0.5rem + 0.8vw, 1.6rem);
 	text-align: center;
 	color: var(--color-font-quote);
-}
+} */
 
 /* Testimonial section */
 
-.testimonial {
+/* .testimonial {
 	display: flex;
 	flex-direction: column;
 
@@ -244,10 +426,10 @@ h1 {
 	font-size: 2.5rem;
 	font-weight: bold;
 	align-self: flex-end;
-}
+} */
 
 /* Call to action */
-
+/* 
 .cta {
 	width: 70%;
 	display: flex;
@@ -269,4 +451,4 @@ h1 {
 .cta__text {
 	max-width: 50ch;
 	margin-top: 1rem;
-}
+} */
