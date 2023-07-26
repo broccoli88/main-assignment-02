@@ -74,10 +74,214 @@ h1 {
 	color: var(--color-font-hero-main);
 }
 
-/* ...::: [ PAGE 1  -  PELIN] :::... */
+/* ...::: [ FEATURES  -  PELIN] :::... */
+section{
+	margin-bottom: 100px;
+	padding: 0 10%;
+}
+/*NAVBAR*/
 
-/* place for your code */
+.nav-links li,a{
+	color: var(--color-font-hero-secondary) ;
+	text-decoration: none;
+	font-size: var(--size-font-hero-secondary);
+}
 
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15%;
+    background-color: var(--color-bg-hero);
+}
+
+.logo{
+    cursor: pointer;
+    font-size: var(--size-font-logo);
+    color: var(--color-font-logo);
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a:hover{
+    color: var(--color-bg-cta);
+}
+/*HERO*/
+.hero {
+    background-image: url("/main-assignment-02/images/heroimg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+	justify-content: center;
+	padding-top: 10vh;
+  }
+
+  .hero-content {
+    text-align: center;
+    color: var(--color-font-hero-main);
+  }
+ /*BUTTON*/
+
+  .btn{
+	display: inline-block;
+	padding: 1rem 5rem;
+	border-radius: 8px;
+	margin-top: 20px;
+	border: none;
+	cursor: pointer;
+	transition: 0.3s all ease-in;
+	font-size: var(--size-font-main);
+  }
+  .btn-blue{
+	background-color: var(--color-bg-button);
+	color: var(--color-font-hero-secondary);
+  }
+
+  .btn:hover{
+	filter: brightness(1.4);
+  }
+  /*CARD*/
+  .card-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 20px;
+  }
+
+  .card {
+    flex: 0 0 calc(25% - 40px); /* Each card takes 25% width with 20px gap on each side */
+    border: 1px solid var(--color-bg-quote);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .features h2{
+	text-align: center;
+	padding-bottom: 50px;
+  }
+
+  .intro{
+	background-image: url("/main-assignment-02/images/heroimg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+	padding-top: 10vh;
+  }
+
+  .intro-content{
+	color: var(--color-font-hero-main);
+	width: 50%;
+  }
+
+  .information{
+	display: flex;
+	gap: 30px;
+	text-align: justify;
+  }
+/*FAQ*/
+ .faq-container{
+	display: flex;
+	justify-content: space-between;
+	gap: 80px;
+ }
+ 
+ .faq-content{
+	width: 100%;
+ }
+
+ .faq-item{
+	padding-bottom: 10px;
+ }
+
+ .faq h2{
+	padding-bottom: 50px;
+	text-align: center;
+ }
+
+ .question{
+	border-radius: 8px;
+	padding: 15px;
+	background-color: var(--color-bg-quote);
+ }
+
+ .answer{
+	padding: 20px 0;
+ }
+ /*SCROLL TO TOP*/
+
+ .faq-container button{
+	position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 99;
+ }
+
+ .faq-container button img{
+	height: 25px;
+ }
+
+ /*FOOTER*/
+
+.footer{
+	background-color: var(--color-bg-hero);
+	padding: 80px 0;
+}
+
+.footer-content{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1170px;
+	margin: auto;
+	justify-content: space-between;
+}
+
+.footer-item img{
+	height: 100px;
+	max-width: 100%;
+}
+
+.footer-item h4{
+	color: var(--color-bg-button);
+	font-size: var(--size-font-hero-secondary);
+	text-transform: uppercase;
+	text-decoration: underline;
+	margin-bottom: 30px;
+	position: relative;
+}
+.footer-item ul li a{
+	text-decoration: none;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-item ul li a:hover{
+	padding-left: 10px;
+	color: var(--color-bg-button);
+}
+.footer-bottom{
+	text-align: center;
+	color: var(--color-font-hero-main);
+	margin-top: 50px;
+}
 /* ...::: [ PAGE 2  -  LEHI] :::... */
 
 /* place for your code */
