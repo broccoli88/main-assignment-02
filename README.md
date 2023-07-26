@@ -2,7 +2,7 @@
 
 CSS assignment
 
-Topic: VPN
+Topic: KrievVPN
 
 Workload spread:
 
