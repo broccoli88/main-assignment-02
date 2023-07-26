@@ -152,14 +152,15 @@ h1 {
 
 /* BLOG */
 
+.contact-container,
 .blog-container {
 	width: 100%;
 	max-width: 120rem;
 	margin-inline: auto;
 	padding: 2rem;
 }
-
-.blog-heading {
+.contact__heading,
+.blog__heading {
 	font-size: var(--size-font-inf-header);
 	color: var(--color-font-inf-header);
 	text-align: center;
@@ -210,6 +211,11 @@ h1 {
 	background-color: transparent;
 	padding: 1em 0.5em;
 	width: 100%;
+}
+
+.theme__search-input::placeholder,
+.contact__input::placeholder {
+	opacity: 0.6;
 }
 
 .blog {
@@ -316,6 +322,57 @@ h1 {
 		width: min(45rem, 100%);
 	}
 }
+
+/* CONTACT  */
+
+.contact__form {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	margin-top: 5rem;
+}
+
+.contact__fieldset {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 60rem;
+	margin-inline: auto;
+	padding: 2rem;
+
+	border-color: var(--border-blue);
+	border-radius: 20px;
+	box-shadow: 0 0 15px hsl(0, 0%, 0%, 0.1);
+}
+
+.contact__legend {
+	color: var(--color-bg-button);
+	font-weight: var(--weight-font-inf-header);
+	font-size: var(--size-font-main);
+	margin-left: 2rem;
+}
+
+.contact__label {
+	font-size: 1.4rem;
+	color: hsl(215, 28%, 17%, 0.7);
+}
+
+.contact__message,
+.contact__input {
+	padding: 0.6em 1em;
+	margin-block: 0.5rem 2rem;
+	border: 1px solid var(--border-blue);
+	border-radius: 10px;
+	font-size: var(--size-font-main);
+	font-family: var(--family-font-roboto);
+	box-shadow: 0 0 5px hsl(0, 0%, 0%, 0.2);
+}
+
+.contact__btn {
+	padding-inline: 5em;
+	margin-inline: auto;
+}
+
 /* Hero section */
 /* 
 .hero {
