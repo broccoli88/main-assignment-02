@@ -6,7 +6,7 @@ Topic: VPN
 
 Workload spread:
 
-Pelin: Features Page
-Lehi: Pricing Page
-Yosef: Landing Page;
+Pelin: Features Page //
+Lehi: Pricing Page // 
+Yosef: Landing Page // 
 Pawel: Contact Page
