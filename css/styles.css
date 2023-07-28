@@ -168,7 +168,7 @@ section{
   }
  /*BUTTON*/
 
-  .btn{
+  .btnp{
 	display: inline-block;
 	padding: 1rem 5rem;
 	border-radius: 999px;
@@ -178,12 +178,12 @@ section{
 	transition: 0.3s all ease-in;
 	font-size: var(--size-font-main);
   }
-  .btn-blue{
+  .btnp-blue{
 	background-color: var(--color-bg-button);
 	color: var(--color-font-hero-secondary);
   }
 
-  .btn:hover{
+  .btnp:hover{
 	filter: brightness(1.4);
 	transform: scale(1.05);
   }
