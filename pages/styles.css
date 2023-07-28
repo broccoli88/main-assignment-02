@@ -60,7 +60,9 @@ body {
 	color: var(--color-font-main);
 	line-height: 1.5;
 	letter-spacing: 1px;
+	/*background-color: var(--color-bg);*/
 	background-color: var(--color-bg);
+
 }
 
 h1,
@@ -78,9 +80,40 @@ h1 {
 
 /* place for your code */
 
+
+
+
 /* ...::: [ PAGE 2  -  LEHI] :::... */
 
-/* place for your code */
+.head1{
+	color: var(--color-font-hero-main);
+	font-size: var(--size-font-hero-main);
+	background-color: var(--color-bg-cta);
+	padding-left: 25px;
+	align-items: center;
+}
+
+.main1{
+	background-color: var(--color-bg-hero);
+	padding-left: 50px;
+}
+
+.s1, .s2, .s3, .perks{
+
+	color: var(--color-font-hero-secondary);
+	font-size: var(--size-font-hero-secondary);
+
+}
+.plan-name{
+	font-weight: var(--weight-font-hero-main);
+}
+.free{
+	color: var(--color-font-hero-secondary);
+	font-weight: var(--weight-font-hero-main);
+}
+
+
+
 
 /* ...::: [ PAGE 3  -  YOSEF] :::... */
 
