@@ -74,48 +74,86 @@ h1 {
 	color: var(--color-font-hero-main);
 }
 
+h2,h3{
+	padding-bottom: 10px;
+}
+
 /* ...::: [ FEATURES  -  PELIN] :::... */
 section{
 	margin-bottom: 100px;
 	padding: 0 10%;
 }
 /*NAVBAR*/
-
-.nav-links li,a{
-	color: var(--color-font-hero-secondary) ;
-	text-decoration: none;
-	font-size: var(--size-font-hero-secondary);
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 15%;
-    background-color: var(--color-bg-hero);
-}
-
-.logo{
-    cursor: pointer;
-    font-size: var(--size-font-logo);
+  .navbar input{
+	display: none;
+  }
+  .navbar {
+	display: flex;
+	align-items: center;
+	background-color: var(--color-bg-hero);
+	color: var(--color-font-hero-secondary);
+	padding: 20px 15%;
+	justify-content: space-between;
+  }
+  
+  .logo {
+	flex-grow: 1;
+	font-size: var(--size-font-logo);
+	font-weight: var(--weight-font-logo);
+	cursor: pointer;
     color: var(--color-font-logo);
-}
+  }
+  
+  .nav-links {
+	display: flex;
+	align-items: center;
+  }
+  
+  .nav-links a {
+	color: var(--color-font-hero-secondary);
+	text-decoration: none;
+	margin: 0 15px;
+  }
+  
+  .nav-links a:hover{
+	color: var(--color-bg-button);
+  }
+  
+  .hamburger {
+	display: none;
+	font-size: var(--size-font-hero-main);
+	cursor: pointer;
+  }
 
-.nav-links{
-    list-style: none;
-}
+  /* Media query for mobile and tablet */
+  @media screen and (max-width: 1024px){
+	.nav-links {
+	  display: none; 
+	  flex-direction: column;
+	  background-color: var(--color-bg-hero); 
+	  position: absolute;
+	  top: 65px;
+	  left: 0;
+	  width: 100%;
+	  z-index: 1;
+	}
+  
+	.nav-links a {
+	  margin: 10px;
+	}
+  
+	.hamburger {
+	  display: block;
+	}
 
-.nav-links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
+	#nav-toggle:checked ~ .nav-links {
+	  display: flex;
+	}
+  }
 
-.nav-links li a:hover{
-    color: var(--color-bg-cta);
-}
 /*HERO*/
-.hero {
-    background-image: url("/main-assignment-02/images/heroimg.jpg");
+ .feat-hero {
+    background-image: url("/main-assignment-02/images/bg1.jpg");
     background-size: cover;
     background-position: center;
     height: 60vh;
@@ -124,7 +162,7 @@ header{
 	padding-top: 10vh;
   }
 
-  .hero-content {
+  .feat-hero-content {
     text-align: center;
     color: var(--color-font-hero-main);
   }
@@ -133,7 +171,7 @@ header{
   .btn{
 	display: inline-block;
 	padding: 1rem 5rem;
-	border-radius: 8px;
+	border-radius: 999px;
 	margin-top: 20px;
 	border: none;
 	cursor: pointer;
@@ -147,17 +185,19 @@ header{
 
   .btn:hover{
 	filter: brightness(1.4);
+	transform: scale(1.05);
   }
+
   /*CARD*/
   .card-container{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	padding: 20px;
+	padding: 20px 0;
   }
 
   .card {
-    flex: 0 0 calc(25% - 40px); /* Each card takes 25% width with 20px gap on each side */
+    flex: 0 0 calc(30% - 20px); /* Each card takes 25% width with 20px gap on each side */
     border: 1px solid var(--color-bg-quote);
     border-radius: 8px;
     padding: 20px;
@@ -167,6 +207,7 @@ header{
   
   .card img {
     max-width: 100%;
+	height: 300px;
     border-radius: 4px;
     margin-bottom: 10px;
   }
@@ -177,12 +218,12 @@ header{
   }
 
   .intro{
-	background-image: url("/main-assignment-02/images/heroimg.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 40vh;
+	background-image: url("/main-assignment-02/images/bg2.jpg");
+    background-size:cover;
+    background-position:center;
+    height: 50vh;
     display: flex;
-	padding-top: 10vh;
+	align-items: center;
   }
 
   .intro-content{
@@ -192,7 +233,7 @@ header{
 
   .information{
 	display: flex;
-	gap: 30px;
+	gap: 50px;
 	text-align: justify;
   }
 /*FAQ*/
@@ -207,7 +248,7 @@ header{
  }
 
  .faq-item{
-	padding-bottom: 10px;
+	padding-bottom: 15px;
  }
 
  .faq h2{
@@ -216,9 +257,15 @@ header{
  }
 
  .question{
-	border-radius: 8px;
-	padding: 15px;
+	border-radius: 999px;
+	padding: 20px;
 	background-color: var(--color-bg-quote);
+	transition: 0.3s all ease-in;
+ }
+
+ .question:hover{
+	filter: brightness(0.9);
+	transform: scale(1.03);
  }
 
  .answer{
@@ -235,11 +282,6 @@ header{
     cursor: pointer;
     z-index: 99;
  }
-
- .faq-container button img{
-	height: 25px;
- }
-
  /*FOOTER*/
 
 .footer{
@@ -268,19 +310,61 @@ header{
 	margin-bottom: 30px;
 	position: relative;
 }
+
+.footer-item ul{
+	list-style: none;
+}
+
 .footer-item ul li a{
 	text-decoration: none;
 	display: block;
 	transition: all 0.3s ease;
+	color: var(--color-font-hero-secondary);
 }
+
 .footer-item ul li a:hover{
 	padding-left: 10px;
 	color: var(--color-bg-button);
 }
+
 .footer-bottom{
 	text-align: center;
 	color: var(--color-font-hero-main);
 	margin-top: 50px;
+}
+
+/*MEDIA QUERY FOR MOBILE*/
+@media screen and (max-width: 767px) {
+	.card{
+		flex: 0 0 calc(100% - 20px);
+	}
+	.card-container{
+		gap: 30px;
+	}
+	.intro-content p{
+		display: none;
+	}
+	.information div:first-child{
+		display: none;
+	}
+	.footer{
+		padding:80px 30px;
+	}
+	.footer-content div:last-child, div:nth-child(3){
+		display: none;
+	}
+}
+/*MEDIA QUERY FOR TABLET*/
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	.card{
+		flex: 0 0 calc(50% - 20px);
+	}
+	.card-container div:last-child{
+		display: none;
+	}
+	.footer{
+		padding:80px 30px;
+	}
 }
 /* ...::: [ PAGE 2  -  LEHI] :::... */
 
