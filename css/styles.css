@@ -61,6 +61,7 @@ html {
 }
 
 body {
+	min-height: 100vh;
 	font-size: var(--size-font-main);
 	font-weight: var(--weight-font-main);
 	font-family: var(--family-font-roboto);
@@ -69,6 +70,9 @@ body {
 	letter-spacing: 1px;
 	/*background-color: var(--color-bg);*/
 	background-color: var(--color-bg);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 h1,
@@ -93,7 +97,7 @@ h3 {
 }
 
 /* ...::: [ FEATURES  -  PELIN] :::... */
-section {
+.features-main section {
 	margin-bottom: 100px;
 	padding: 0 10%;
 }
@@ -101,10 +105,14 @@ section {
 .navbar input {
 	display: none;
 }
+
+.navbar-container {
+	background-color: var(--color-bg-hero);
+}
+
 .navbar {
 	display: flex;
 	align-items: center;
-	background-color: var(--color-bg-hero);
 	color: var(--color-font-hero-secondary);
 	padding: 20px 15%;
 	justify-content: space-between;
@@ -167,12 +175,13 @@ section {
 
 /*HERO*/
 .feat-hero {
-	background-image: url("/main-assignment-02/images/bg1.jpg");
+	background-image: url("../images/bg1.jpg");
 	background-size: cover;
 	background-position: center;
 	height: 60vh;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	padding-top: 10vh;
 }
 
@@ -232,7 +241,7 @@ section {
 }
 
 .intro {
-	background-image: url("/main-assignment-02/images/bg2.jpg");
+	background-image: url("../images/bg2.jpg");
 	background-size: cover;
 	background-position: center;
 	height: 50vh;
@@ -386,13 +395,13 @@ section {
 .head1 {
 	color: var(--color-font-hero-main);
 	font-size: var(--size-font-hero-main);
-	background-color: var(--color-bg-cta);
+	background-color: var(--color-bg-hero);
 	padding-left: 25px;
 	align-items: center;
 }
 
 .main1 {
-	background-color: var(--color-bg-hero);
+	background-color: var(--color-bg-button);
 	padding-left: 50px;
 }
 
@@ -413,16 +422,7 @@ section {
 
 /* ...::: [ PAGE 3  -  YOSEF] :::... */
 
-@font-face {
-	font-family: "Roboto";
-	src: url(Roboto/Roboto-Bold.ttf) format("truetype");
-}
-
-* {
-	font-family: "Roboto";
-}
-
-header {
+.hero {
 	background-color: rgb(5, 0, 41);
 	flex-direction: row;
 	padding: 15px 30px;
@@ -471,8 +471,12 @@ header {
 	display: flex;
 	color: white;
 	padding: 30px;
+	align-items: center;
 }
 .productImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	padding: 10px;
 }
 .mainText {
@@ -494,9 +498,10 @@ header {
 
 /* Designing second page */
 .headerFeature {
-	font-size: 2.5rem;
+	font-size: 4rem;
 	text-align: center;
 	font-weight: bold;
+	margin-block: 4rem;
 }
 
 .parent {
@@ -541,9 +546,10 @@ header {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 80vh;
+	/* height: 80vh; */
+
 	overflow: hidden;
-	margin: 0;
+	margin-block: 7rem;
 	padding: 20px;
 }
 
@@ -555,7 +561,7 @@ header {
 	padding: 50px 20px;
 	text-align: center;
 	max-width: 100%;
-	width: 700px;
+	width: 7 1000px;
 }
 
 h3 {
@@ -601,6 +607,7 @@ h3 {
 	/* 60% of the page */
 	width: 60%;
 	height: auto;
+	margin-bottom: 4rem;
 }
 
 .callToAction {
@@ -621,15 +628,6 @@ h3 {
 	font-size: 16px;
 	border: 0;
 	cursor: pointer;
-}
-
-/* Styling the footer */
-.footer {
-	background-color: rgb(0, 0, 41);
-	color: white;
-	padding: 15px 50px;
-	text-align: center;
-	margin-top: 10px;
 }
 
 /* ...::: [ PAGE 4  -  PAWEL] :::... */
@@ -688,60 +686,6 @@ h3 {
 	padding-inline: 1rem;
 }
 
-/* NAV */
-
-.pnav-wrapper {
-	width: 100%;
-	background-color: var(--color-bg-hero);
-	box-shadow: 0 0 10px hsl(0, 0%, 0%, 0.5);
-	margin-bottom: 5vw;
-}
-
-.nav-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex: 1;
-}
-
-.brand {
-	font-size: var(--size-font-logo);
-	font-weight: var(--weight-font-logo);
-	color: var(--color-font-logo);
-}
-
-.pnav__list {
-	display: flex;
-	gap: 2rem;
-	font-size: clamp(1.3rem, 0.8rem + 1vw, var(--size-font-main));
-}
-
-.pnav__list a {
-	color: var(--color-font-logo);
-	font-weight: 300;
-	transition: 0.2s color ease-in;
-}
-
-.pnav__list p {
-	font-weight: 300;
-	color: var(--color-bg-button);
-}
-
-.pnav__list a:hover,
-.pnav__list a:focus {
-	color: var(--color-bg-button);
-}
-
-@media (max-width: 650px) {
-	.nav-container {
-		flex-direction: column;
-		gap: 1rem;
-	}
-
-	.pnav__list {
-		gap: 4rem;
-	}
-}
 /* BLOG */
 
 .contact-container,
@@ -977,20 +921,4 @@ h3 {
 .contact__btn {
 	padding-inline: 5em;
 	margin-inline: auto;
-}
-
-/* Footer */
-
-.pfooter {
-	background-color: var(--color-bg-hero);
-	padding: 2.5rem;
-	box-shadow: 0 0 10px hsl(0, 0%, 0%, 0.5);
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
-	margin-top: 5vw;
-}
-
-.pfooter > * {
-	color: var(--color-font-logo);
 }
