@@ -101,6 +101,10 @@ h3 {
 	margin-bottom: 100px;
 	padding: 0 10%;
 }
+
+.features-main h3 {
+	color: black;
+}
 /*NAVBAR*/
 .navbar input {
 	display: none;
