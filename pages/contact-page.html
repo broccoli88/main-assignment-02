@@ -7,19 +7,19 @@
 		<link rel="stylesheet" href="../css/styles.css" />
 	</head>
 	<body>
-		<header class="pnav-wrapper">
-			<div class="nav-container contact-container">
-				<section>
-					<a href="#" class="brand"> KrievVPN </a>
-				</section>
-				<nav class="pnav__list">
-					<a href="../index.html"> Main</a>
-					<a href="#"> Pricing</a>
-					<a href="#"> Features</a>
-					<a href="./blog-page.html">Blog</a>
-					<p>Contact</p>
-				</nav>
-			</div>
+		<header>
+			<nav class="navbar">
+				<input type="checkbox" id="nav-toggle" class="nav-toggle" />
+				<div class="logo">KrievVPN</div>
+				<div class="nav-links">
+					<a href="../index.html">Main</a>
+					<a href="./pages/features.html">Features</a>
+					<a href="./pages/pricing.html">Pricing</a>
+					<a href="./pages/blog-page.html">Blog</a>
+					<a href="./pages/contact-page.html">Contact Us</a>
+				</div>
+				<label for="nav-toggle" class="hamburger">&#9776;</label>
+			</nav>
 		</header>
 		<main class="contact-container">
 			<h2 class="contact__heading">Contact Us</h2>
@@ -58,9 +58,45 @@
 				</button>
 			</form>
 		</main>
-		<footer class="pfooter">
-			<p>Copyright</p>
-			<span>&copy;</span>
+		<footer class="footer">
+			<div class="footer-content">
+				<div class="footer-item">
+					<h4>KrievVPN</h4>
+					<img src="./images/logo.png" alt="" />
+				</div>
+				<div class="footer-item">
+					<h4>KrievVPN</h4>
+					<ul>
+						<li><a href="../index.html">Main Page</a></li>
+						<li><a href="./pages/features.html">Features</a></li>
+						<li><a href="./pages/pricing.html">Pricing</a></li>
+						<li><a href="./pages/blog-page.html">Blog</a></li>
+						<li>
+							<a href="./pages/contact-page.html">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-item">
+					<h4>Legal</h4>
+					<ul>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+					</ul>
+				</div>
+				<div class="footer-item">
+					<h4>Contact</h4>
+					<ul>
+						<li>
+							<a href="mailto:contact@example.com"
+								>contact@example.com</a
+							>
+						</li>
+						<li><a href="#">123 Main Street, City, Country</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2023 KrievVPN. All rights reserved.</p>
+			</div>
 		</footer>
-	</body>
 </html>
