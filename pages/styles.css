@@ -92,17 +92,60 @@ h1 {
 	padding-left: 25px;
 	align-items: center;
 }
+.main1 h1{padding: 50px;}
 
 .main1{
 	background-color: var(--color-bg-hero);
 	padding-left: 50px;
+	padding-top: 40px;
+	text-align: center;
 }
 
-.s1, .s2, .s3, .perks{
+.s1, .s2, .s3{
 
 	color: var(--color-font-hero-secondary);
 	font-size: var(--size-font-hero-secondary);
+	border-style: solid;
+	border-width: medium;
+	border-color: var(--color-font-hero-main);
+	padding: 50px;
+	border-radius: 10px;
+	width: 350px;
+	display: inline-block;
+	
 
+}
+
+.perks{
+	padding: 50px; 
+	
+}
+.perks div{
+	padding: 25px;
+}
+.perks h3{
+	font-size: var(--size-font-inf-header);
+	font-weight: var(--weight-font-hero-main);
+	color: var(--color-font-hero-main);
+}
+
+.perks article{
+	color: var(--color-font-hero-secondary);
+	font-size: var(--size-font-hero-secondary);
+	border-style: solid;
+	border-width: medium;
+	border-color: var(--color-font-hero-main);
+	padding: 50px;
+	border-radius: 10px;
+	width: 390px;
+	display: inline-block;
+}
+
+.btns{
+	border-radius: 8px;
+	font-size: 20px;
+	background-color: var(--color-bg-cta);
+	padding: 15px 32px;
 }
 .plan-name{
 	font-weight: var(--weight-font-hero-main);
@@ -110,7 +153,17 @@ h1 {
 .free{
 	color: var(--color-font-hero-secondary);
 	font-weight: var(--weight-font-hero-main);
+	border-style: solid;
+	border-width: medium;
+	border-color: var(--color-font-hero-main);
+	padding: 50px; width: 500px;
+	border-radius: 10px;
+	margin-top: 70px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
+.free div{padding: 35px;}
 
 
 
