@@ -7,10 +7,18 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <div>
-        <p></p>
-      </div>
+    <header class="navbar-container">
+      <nav class="navbar">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <a href="#" class="logo">KrievVPN</a>
+        <section class="nav-links">
+          <a href="./pages/features.html">Features</a>
+          <a href="./pages/pricing.html">Pricing</a>
+          <a href="./pages/blog-page.html">Blog</a>
+          <a href="./pages/contact-page.html">Contact Us</a>
+        </section>
+        <label for="nav-toggle" class="hamburger">&#9776;</label>
+      </nav>
     </header>
     <!-- Landing page by yousef -->
     <main>
@@ -96,6 +104,45 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+      <section class="footer-content">
+        <header class="footer-item">
+          <h4>KrievVPN</h4>
+          <picture>
+            <img src="../images/logo.png" alt="" />
+          </picture>
+        </header>
+        <section class="footer-item">
+          <h4>KrievVPN</h4>
+          <ul>
+            <li><a href="./pages/features.html">Features</a></li>
+            <li><a href="./pages/pricing.html">Pricing</a></li>
+            <li><a href="./pages/blog-page.html">Blog</a></li>
+            <li>
+              <a href="./pages/contact-page.html">Contact Us</a>
+            </li>
+          </ul>
+        </section>
+        <section class="footer-item">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </section>
+        <section class="footer-item">
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <a href="mailto:contact@example.com">contact@example.com</a>
+            </li>
+            <li><a href="#">123 Main Street, City, Country</a></li>
+          </ul>
+        </section>
+      </section>
+      <section class="footer-bottom">
+        <p>&copy; 2023 KrievVPN. All rights reserved.</p>
+      </section>
+    </footer>
   </body>
 </html>
