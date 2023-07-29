@@ -431,6 +431,14 @@ h3 {
 
 }
 
+@media only screen and (max-width: 767px){
+	.s1, .s2, .s3, .perks{
+		display: block;
+		margin-top: 10px;
+	}
+	
+}
+
 .perks{
 	padding: 50px; 
 	
