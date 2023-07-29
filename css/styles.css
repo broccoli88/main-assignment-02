@@ -500,205 +500,183 @@ h3 {
 
 /* ...::: [ PAGE 3  -  YOSEF] :::... */
 
-.hero {
-	background-color: rgb(5, 0, 41);
-	flex-direction: row;
-	padding: 15px 30px;
-}
-
-.HeadBar {
-	width: 100%;
-	display: flex;
-	color: white;
-	justify-content: space-between;
-	margin-bottom: 10px;
-}
-
-.icons {
-	width: 25%;
-
-	display: flex;
-	justify-content: space-between;
-}
-.iconsbtn:hover {
+.btn {
+	width: max-content;
+	border: none;
+	background: none;
+	font-family: var(--family-font-roboto);
+	font-size: var(--size-font-main);
+	font-weight: var(--weight-font-logo);
+	text-transform: capitalize;
+	padding: 0.5em 2em;
+	border-radius: 10px;
 	cursor: pointer;
-	font-style: italic;
-	scale: 0.98;
+	white-space: nowrap;
+	transition: 0.3s all ease-in;
 }
 
-.iconsbtn {
-	color: white;
-	font-weight: bold;
-	font-style: normal;
-	border: 0;
-	border-radius: 50%;
-	width: 20%;
-	height: 80%;
-	background-color: blue;
+.btn-blue {
+	color: var(--color-font-logo);
+	background-color: var(--color-bg-button);
 }
 
-.TextImage {
+.btn-blue:hover,
+.btn-blue:focus {
+	filter: brightness(1.3);
+}
+
+.btn-white {
+	color: var(--color-bg);
+	border: 2px solid var(--color-bg);
+}
+
+.btn-white:hover,
+.btn-outline-blue:focus {
+	color: var(--color-bg);
+	border: 2px solid var(--color-bg);
+}
+
+/* Hero section */
+
+.hero-main {
+	padding: 7vw 12vw;
+	background-color: var(--color-bg-hero);
 	display: flex;
-	color: white;
-	padding: 30px;
-	align-items: center;
+	gap: 2rem;
 }
-.productImage {
+
+.hero h1 {
+	margin-bottom: 2rem;
+}
+
+.hero-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.hero-text {
+	color: var(--color-font-hero-secondary);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+.hero-img-container {
+	flex: 1.3;
+}
+
+.hero-img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	padding: 10px;
-}
-.mainText {
-	width: 100%;
-	height: 100%;
+	object-position: center;
 }
 
-.btn {
-	width: 50%;
-	cursor: pointer;
-	background-color: rgb(61, 61, 255);
-	color: white;
-	border: 0;
-	border-radius: 10px;
-	padding: 14px 40px;
-	font-size: 16px;
-	cursor: pointer;
+.hero .btn {
+	margin-top: 3rem;
 }
 
-/* Designing second page */
-.headerFeature {
-	font-size: 4rem;
-	text-align: center;
-	font-weight: bold;
-	margin-block: 4rem;
-}
+/* Info section */
 
-.parent {
-	width: 100%;
-	display: flex;
-	justify-content: space-evenly;
-	/* flex-wrap for responsive purpose */
-	flex-wrap: wrap;
-	border-color: blue;
-}
-
-.parent > div {
-	width: auto;
-	letter-spacing: 10px;
-	flex-wrap: wrap;
-	margin: 10px;
-	text-align: center;
-	line-height: 75px;
-	font-size: 30px;
-}
-
-.son {
-	background-color: black;
-	color: white;
-	border-width: 50px;
-	height: 100%;
-	width: 100%;
-	border-radius: 40px;
-	padding: 30px 30px;
-	justify-content: space-between;
-}
-.son:hover {
-	background-color: blue;
-}
-
-/* styling third page */
-
-.myNav {
-	background-color: white;
-	font-family: "Roboto", sans-serif;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	/* height: 80vh; */
-
-	overflow: hidden;
-	margin-block: 7rem;
-	padding: 20px;
-}
-
-.container {
-	background-color: gray;
-	color: white;
-	border-radius: 10px;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-	padding: 50px 20px;
-	text-align: center;
-	max-width: 100%;
-	width: 7 1000px;
-}
-
-h3 {
-	margin: 0;
-	opacity: 0.5;
-	letter-spacing: 2px;
-}
-
-.feedback {
-	width: 100%;
-	font-style: italic;
-	font-size: 20px;
-	letter-spacing: 1px;
-	line-height: 40px;
-	margin: 50px auto;
+.information {
 	display: flex;
 	flex-direction: column;
 }
-.txt {
-	font-family: "Roboto", sans-serif;
-	font-weight: bold;
-	width: 180%;
-	color: white;
-}
 
-/* Styling fourth page */
-.Nav2 {
-	background-color: white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 80%;
-}
-
-.container2 {
-	background-color: rgb(58, 88, 255);
-	color: white;
-	font-weight: bold;
-	border-radius: 5px;
-	padding: 5px 0px;
+.information > h2 {
+	font-size: var(--size-font-inf-header);
+	margin-block: 3rem;
 	text-align: center;
+}
+
+.info-img-wrapper {
 	display: flex;
-	/* 60% of the page */
-	width: 60%;
-	height: auto;
-	margin-bottom: 4rem;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.callToAction {
+.info-img-container {
+	width: min(200px, 100%);
+	display: flex;
+	flex-direction: column;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.info-img {
+	width: 100%;
+	aspect-ratio: 1;
+	border: 3px solid var(--border-blue);
+	border-radius: 7px;
+}
+
+.info-img-description {
+	font-size: clamp(1.3rem, 0.5rem + 0.8vw, 1.6rem);
+	text-align: center;
+	color: var(--color-font-quote);
+}
+
+/* Testimonial section */
+
+.testimonial {
+	display: flex;
+	flex-direction: column;
+
+	padding: 7vw 18vw;
+	margin-top: 10rem;
+
+	background-color: var(--color-bg-quote);
+}
+
+.testimonial-quote,
+.testimonial-quote::after,
+.testimonial-quote::before {
+	font-size: var(--size-font-quote);
+	font-weight: var(--weight-font-quote);
 	font-style: italic;
-	font-size: 20px;
-	letter-spacing: 1px;
-	line-height: 40px;
-	margin: 50px auto;
-	width: 80%;
+	color: var(--color-font-quote);
 }
 
-.ctabtn {
-	height: 40%;
-	background-color: rgb(255, 255, 255);
-	color: black;
-	border: 0;
-	border-radius: 10px;
-	font-size: 16px;
-	border: 0;
-	cursor: pointer;
+.testimonial-quote::before {
+	content: open-quote;
 }
+
+.testimonial-quote::after {
+	content: close-quote;
+}
+
+.testimonial-author {
+	font-size: 2.5rem;
+	font-weight: bold;
+	align-self: flex-end;
+}
+
+/* Call to action */
+
+.cta-field {
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-inline: auto;
+	margin-block: 10rem;
+	padding: 4rem;
+	border-radius: 10px;
+	color: var(--color-font-logo);
+
+	background-color: var(--color-bg-cta);
+}
+
+.cta-field h3 {
+	font-size: 2.4rem;
+}
+
+.cta-text {
+	max-width: 50ch;
+	margin-top: 1rem;
+}
+
 
 /* ...::: [ PAGE 4  -  PAWEL] :::... */
 
