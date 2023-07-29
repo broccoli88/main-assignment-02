@@ -443,6 +443,20 @@ h3 {
 .perks ul {
 	list-style: none;
 }
+
+@media only screen and (max-width: 767px) {
+	.s1,
+	.s2,
+	.s3,
+	.perks {
+		display: block;
+		margin-top: 10px;
+	}
+}
+
+.perks {
+	padding: 50px;
+}
 /*
 .perks div h3{
 	padding: 25px;
